@@ -9,12 +9,21 @@ def click(x, y):
 
 # Reemplaza las coordenadas (x, y) con las que desees
 
-def main():
-    while True:
-        time.sleep(2)
-        click(30, 40)
+cycles = 7
+while cycles < 10 or keyboard.is_pressed('p'):
+    time.sleep(2)
+    click(30, 40)
+    time.sleep(2)
+    click(55, 40)
+    if keyboard.is_pressed('p'):
+        print('Se presionó [p]arar!')
+        break
+    print(cycles)
+    cycles += 1
+if cycles == 10:
+    print(f"El ciclo terminó por el numero limite: ", {cycles})
 
-
+'''
 t = 0
 while True:
     time.sleep(1)
@@ -23,3 +32,4 @@ while True:
     if keyboard.is_pressed('p'):
         print('Se presionó [p]arar!')
         break
+'''
